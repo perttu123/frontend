@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
 //asdasd
 function App() {
+
+  const [viesti, setViesti] = useState("");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +22,8 @@ function App() {
           Learn React
         </a>
         <h1>CD GITHUB TOIMII</h1>
+        <h2>{viesti}</h2>
+        <input onClick={(e)=>setViesti(e.target.value)}>Buttoni</input>
       </header>
     </div>
   );
